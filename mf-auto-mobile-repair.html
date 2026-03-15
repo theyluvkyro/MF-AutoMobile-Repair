@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MF Auto Mobile Repair | Oklahoma City & Edmond</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --black:       #111110;
+  --charcoal:    #1e1e1b;
+  --steel-dark:  #2c2c28;
+  --steel-mid:   #3e3e38;
+  --steel-light: #5a5a52;
+  --grease:      #242420;
+  --orange:      #e8650a;
+  --orange-hot:  #f07020;
+  --orange-dim:  #b84e06;
+  --cream:       #f2ede6;
+  --parchment:   #e8e2d8;
+  --sand:        #c8c0b0;
+  --text-body:   #d8d0c4;
+  --text-muted:  #8a8278;
+  --white:       #ffffff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: var(--charcoal);
+  color: var(--cream);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.topbar {
+  background: var(--orange);
+  text-align: center;
+  padding: 9px 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+header {
+  background: var(--black);
+  border-bottom: 3px solid var(--steel-mid);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-wrap { display: flex; flex-direction: column; line-height: 1.15; }
+
+.logo-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.logo-tag {
+  font-size: 11px;
+  color: var(--orange);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+nav { display: flex; gap: 4px; align-items: center; }
+
+nav a {
+  color: var(--sand);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: color 0.2s, background 0.2s;
+}
+
+nav a:hover { color: var(--white); background: var(--steel-dark); }
+
+.hdr-phone { display: flex; flex-direction: column; align-items: flex-end; }
+
+.hdr-phone-lbl {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hdr-phone-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--orange);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.hdr-phone-num:hover { color: var(--orange-hot); }
+
+/* HERO */
+.hero {
+  background: var(--black);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 24px 72px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  background: var(--orange);
+  opacity: 0.07;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  border: 1px solid var(--orange);
+  padding: 5px 14px;
+  border-radius: 2px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(40px, 5.5vw, 68px);
+  font-weight: 700;
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.hero h1 em { font-style: normal; color: var(--orange); }
+
+.hero-sub {
+  font-size: 17px;
+  color: var(--text-body);
+  max-width: 500px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.btn-orange {
+  background: var(--orange);
+  color: var(--black);
+  padding: 15px 30px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid var(--orange);
+  display: inline-block;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-orange:hover { background: var(--orange-hot); border-color: var(--orange-hot); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--cream);
+  padding: 15px 30px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 2px solid var(--steel-mid);
+  display: inline-block;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.btn-ghost:hover { border-color: var(--sand); background: var(--steel-dark); }
+
+.hero-panel {
+  background: var(--charcoal);
+  border: 1px solid var(--steel-mid);
+  border-top: 4px solid var(--orange);
+  border-radius: 4px;
+  padding: 30px 26px;
+}
+
+.hero-panel h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--white);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--steel-mid);
+}
+
+.check-list { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+
+.check-list li {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+.check-list li::before {
+  content: '✔';
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* SECTIONS */
+.sec { padding: 72px 24px; }
+.sec-inner { max-width: 1140px; margin: 0 auto; }
+
+.sec-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.sec-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.bar {
+  width: 44px;
+  height: 4px;
+  background: var(--orange);
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+.sec-body {
+  font-size: 17px;
+  color: var(--text-body);
+  line-height: 1.72;
+  max-width: 580px;
+}
+
+/* ABOUT */
+.about-sec { background: var(--charcoal); }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.stat {
+  background: var(--steel-dark);
+  border-left: 3px solid var(--orange);
+  padding: 18px 18px 16px;
+  border-radius: 3px;
+}
+
+.stat-n {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.stat-l {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 5px;
+}
+
+.shop-visual {
+  background: var(--black);
+  border-radius: 5px;
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--steel-mid);
+}
+
+.shop-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 28px,
+    rgba(255,255,255,0.04) 28px,
+    rgba(255,255,255,0.04) 30px
+  );
+}
+
+.shop-icon { font-size: 64px; position: relative; z-index: 1; }
+.shop-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* SERVICES */
+.services-sec { background: var(--black); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.svc-card {
+  background: var(--charcoal);
+  border: 1px solid var(--steel-dark);
+  border-top: 3px solid var(--steel-light);
+  border-radius: 3px;
+  padding: 22px 20px;
+  transition: border-top-color 0.2s, background 0.2s;
+  cursor: default;
+}
+
+.svc-card:hover {
+  border-top-color: var(--orange);
+  background: var(--steel-dark);
+}
+
+.svc-icon { font-size: 26px; display: block; margin-bottom: 10px; }
+
+.svc-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.svc-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+/* HOW IT WORKS */
+.how-sec { background: var(--grease); border-top: 1px solid var(--steel-dark); border-bottom: 1px solid var(--steel-dark); }
+
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin-top: 52px;
+  position: relative;
+}
+
+.steps-row::before {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: 16.66%;
+  right: 16.66%;
+  height: 2px;
+  background: var(--steel-mid);
+  z-index: 0;
+}
+
+.step { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+
+.step-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--black);
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.step-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.step-body { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+/* REVIEWS */
+.reviews-sec { background: var(--charcoal); }
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+}
+
+.review {
+  background: var(--black);
+  border: 1px solid var(--steel-dark);
+  border-radius: 4px;
+  padding: 26px 24px;
+}
+
+.stars { color: var(--orange); font-size: 17px; letter-spacing: 3px; margin-bottom: 14px; }
+
+.review-q {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.68;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+
+.review-who { font-weight: 700; font-size: 13px; color: var(--cream); }
+.review-loc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* SERVICE AREA */
+.area-sec { background: var(--cream); }
+
+.area-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 56px;
+  margin-top: 48px;
+  align-items: start;
+}
+
+.area-chips {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.area-chips li {
+  background: var(--parchment);
+  border: 1px solid var(--sand);
+  border-radius: 3px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2a2820;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.area-chips li .pin-icon { width:14px;height:14px;flex-shrink:0; }
+.area-note { font-size: 13px; color: var(--text-muted); margin-top: 14px; font-style: italic; }
+
+.area-cta-box {
+  background: var(--black);
+  border-radius: 4px;
+  padding: 32px 28px;
+  border-top: 4px solid var(--orange);
+}
+
+.area-cta-box h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.area-cta-box p {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.big-phone {
+  font-family: 'Oswald', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--orange);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.big-phone:hover { color: var(--orange-hot); }
+
+/* CONTACT */
+.contact-sec { background: var(--black); }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 48px;
+  align-items: start;
+}
+
+.contact-num {
+  font-family: 'Oswald', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--orange);
+  text-decoration: none;
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+
+.contact-num:hover { color: var(--orange-hot); }
+.contact-tap { font-size: 13px; color: var(--text-muted); margin-bottom: 36px; }
+
+.info-rows { display: flex; flex-direction: column; gap: 16px; }
+
+.info-row {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 16px;
+  background: var(--charcoal);
+  border-radius: 3px;
+  border-left: 3px solid var(--orange);
+}
+
+.info-emoji { font-size: 20px; flex-shrink: 0; }
+
+.info-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.info-val { font-size: 14px; color: var(--cream); font-weight: 600; }
+
+.cform {
+  background: var(--charcoal);
+  border: 1px solid var(--steel-mid);
+  border-top: 4px solid var(--orange);
+  border-radius: 4px;
+  padding: 34px 30px;
+}
+
+.cform h3 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  margin-bottom: 26px;
+}
+
+.fg { margin-bottom: 16px; }
+
+label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 15px;
+  background: var(--black);
+  border: 1px solid var(--steel-mid);
+  border-radius: 3px;
+  color: var(--cream);
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+
+input::placeholder, textarea::placeholder { color: var(--steel-light); }
+input:focus, textarea:focus { border-color: var(--orange); }
+textarea { resize: vertical; min-height: 90px; }
+
+.form-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--orange);
+  color: var(--black);
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s;
+}
+
+.form-btn:hover { background: var(--orange-hot); }
+
+/* FOOTER */
+footer {
+  background: var(--black);
+  border-top: 3px solid var(--orange);
+  padding: 52px 24px 24px;
+}
+
+.footer-inner { max-width: 1140px; margin: 0 auto; }
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.footer-brand-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--white);
+}
+
+.footer-brand-tag {
+  font-size: 12px;
+  color: var(--orange);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 14px;
+  display: block;
+  margin-top: 2px;
+}
+
+.footer-brand p { font-size: 14px; color: var(--text-muted); line-height: 1.65; max-width: 280px; }
+
+.f-phone {
+  font-family: 'Oswald', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--orange);
+  text-decoration: none;
+  display: block;
+  margin-top: 18px;
+  transition: color 0.2s;
+}
+
+.f-phone:hover { color: var(--orange-hot); }
+
+.footer-col h4 {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--steel-dark);
+}
+
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.footer-col ul li { font-size: 13px; color: #5a5850; }
+
+.footer-bottom {
+  border-top: 1px solid var(--steel-dark);
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--steel-light);
+}
+
+.sticky-mob {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--orange);
+  color: var(--black);
+  text-align: center;
+  padding: 18px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  z-index: 200;
+}
+
+@media (max-width: 960px) {
+  .hero-inner, .about-grid, .contact-grid, .area-grid, .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .hero-panel { display: none; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-row { grid-template-columns: 1fr; gap: 32px; }
+  .steps-row::before { display: none; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  nav { display: none; }
+  .sticky-mob { display: block; }
+  .footer-top { grid-template-columns: 1fr; gap: 28px; }
+  body { padding-bottom: 70px; }
+}
+
+@media (max-width: 580px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .area-chips { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg> Mobile Mechanic — We Come To You — Oklahoma City & Edmond — (405) 923-5774</div>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-wrap">
+      <span class="logo-name">MF Auto Mobile Repair</span>
+      <span class="logo-tag">Mobile Mechanic · OKC & Edmond</span>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#area">Service Area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="hdr-phone">
+      <span class="hdr-phone-lbl">Call Now</span>
+      <a class="hdr-phone-num" href="tel:+14059235774">(405) 923-5774</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg> Mobile Auto Repair — OKC & Edmond</div>
+      <h1>Repair That<br>Comes <em>To You</em></h1>
+      <p class="hero-sub">No tow truck. No waiting room. Zoran comes straight to your home, job, or roadside and fixes it right there. Honest work. Fair pricing.</p>
+      <div class="hero-btns">
+        <a href="tel:+14059235774" class="btn-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Call Now</a>
+        <a href="#contact" class="btn-ghost">Request Service</a>
+      </div>
+    </div>
+    <div class="hero-panel">
+      <h3>Why MF Auto?</h3>
+      <ul class="check-list">
+        <li>We come to you — no shop visit needed</li>
+        <li>Skip the tow truck, save real money</li>
+        <li>Straight talk, honest pricing</li>
+        <li>Same-day service available</li>
+        <li>Experienced mechanic you can trust</li>
+        <li>Serving OKC & Edmond metro</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec about-sec" id="about">
+  <div class="sec-inner">
+    <div class="about-grid">
+      <div>
+        <span class="sec-tag">About Us</span>
+        <h2 class="sec-title">A Mechanic<br>Who Shows Up</h2>
+        <div class="bar"></div>
+        <p class="sec-body">MF Auto Mobile Repair is run by Zoran, a skilled mechanic serving Oklahoma City and Edmond. He comes directly to you — at home, at work, or wherever your vehicle is stranded.</p>
+        <br>
+        <p class="sec-body">No waiting rooms. No tow bills. No shop markup. Just an honest mechanic who shows up, explains the problem clearly, and gets you back on the road at a fair price.</p>
+        <div class="about-stats">
+          <div class="stat"><div class="stat-n">10+</div><div class="stat-l">Years Experience</div></div>
+          <div class="stat"><div class="stat-n">Same Day</div><div class="stat-l">Service Available</div></div>
+          <div class="stat"><div class="stat-n">$0</div><div class="stat-l">Tow Truck Needed</div></div>
+          <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Honest Pricing</div></div>
+        </div>
+      </div>
+      <div class="shop-visual">
+        <svg class="shop-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        <div class="shop-label">On-Location Repairs</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec services-sec" id="services">
+  <div class="sec-inner">
+    <span class="sec-tag">What We Fix</span>
+    <h2 class="sec-title">Our Services</h2>
+    <div class="bar"></div>
+    <p class="sec-body">Most common repairs done right at your location. If it can be safely done outside a shop, Zoran handles it — saving you the tow and the inflated shop rates.</p>
+    <div class="services-grid">
+      <div class="svc-card"><span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span><div class="svc-name">Brake Repair</div><p class="svc-desc">Pads, rotors, calipers, and lines inspected and replaced on-site for your safety.</p></div>
+      <div class="svc-card"><span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><div class="svc-name">Alternator Replacement</div><p class="svc-desc">Battery keeps dying? Dashboard lights flickering? We diagnose and replace your alternator on location.</p></div>
+      <div class="svc-card"><span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><div class="svc-name">Starter Replacement</div><p class="svc-desc">Car won't crank? A bad starter is a common fix we handle right in your driveway.</p></div>
+      <div class="svc-card"><span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><div class="svc-name">Diagnostics</div><p class="svc-desc">Check engine light on? We run a full scan and explain exactly what's going on — no guesswork.</p></div>
+      <div class="svc-card"><span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><div class="svc-name">Suspension Repair</div><p class="svc-desc">Rough ride or pulling to one side? We inspect and repair shocks, struts, and suspension parts.</p></div>
+      <div class="svc-card"><span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span><div class="svc-name">Tune-Ups</div><p class="svc-desc">Spark plugs, filters, and fluid checks to keep your engine running clean and efficient.</p></div>
+      <div class="svc-card"><span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="6" width="22" height="13" rx="2"/><path d="M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="11" x2="12" y2="15"/><line x1="10" y1="13" x2="14" y2="13"/></svg></span><div class="svc-name">Battery Issues</div><p class="svc-desc">Dead battery or corroded connections? We test, charge, and replace batteries on the spot.</p></div>
+      <div class="svc-card"><span class="svc-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span><div class="svc-name">Roadside Repair</div><p class="svc-desc">Broken down somewhere? Call us. We come to your location and get you moving again.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec how-sec">
+  <div class="sec-inner">
+    <span class="sec-tag">Simple Process</span>
+    <h2 class="sec-title">How It Works</h2>
+    <div class="bar"></div>
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-circle">1</div>
+        <div class="step-title">Call or Request</div>
+        <p class="step-body">Call us or fill out the contact form. Tell us your vehicle issue and where you're located.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">2</div>
+        <div class="step-title">We Come to You</div>
+        <p class="step-body">Zoran drives to your home, workplace, or wherever the car is. No tow truck required.</p>
+      </div>
+      <div class="step">
+        <div class="step-circle">3</div>
+        <div class="step-title">Back on the Road</div>
+        <p class="step-body">Problem fixed on-site. We explain everything clearly. Fair price, no surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec reviews-sec" id="reviews">
+  <div class="sec-inner">
+    <span class="sec-tag">Customer Reviews</span>
+    <h2 class="sec-title">What People Say</h2>
+    <div class="bar"></div>
+    <div class="reviews-grid">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-q">"Zoran was fast, honest, and explained everything clearly. Saved me thousands compared to the shop quote. Came right to my house and had the alternator done in under two hours."</p>
+        <div class="review-who">Michael T.</div>
+        <div class="review-loc">Oklahoma City, OK</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-q">"I was stranded on the highway and called MF Auto. He showed up fast, found the problem, and got me going again. Very knowledgeable and very fair on price. Highly recommend."</p>
+        <div class="review-who">Amanda R.</div>
+        <div class="review-loc">Edmond, OK</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p class="review-q">"Honest mechanic, same-day service, didn't try to upsell me on anything. Fixed my brakes right in my driveway. Will absolutely use again — already told my whole neighborhood."</p>
+        <div class="review-who">James K.</div>
+        <div class="review-loc">North OKC, OK</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec area-sec" id="area">
+  <div class="sec-inner">
+    <span class="sec-tag" style="color:var(--orange-dim)">Where We Serve</span>
+    <h2 class="sec-title" style="color:var(--black)">Service Area</h2>
+    <div class="bar"></div>
+    <div class="area-grid">
+      <div>
+        <p class="sec-body" style="color:#5a5248">We cover Oklahoma City, Edmond, and the surrounding metro. Not sure if we reach you? Just give us a call.</p>
+        <ul class="area-chips">
+          <li><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Oklahoma City</li>
+          <li><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Edmond</li>
+          <li><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>North OKC</li>
+          <li><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Midwest City</li>
+          <li><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Moore</li>
+          <li><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Yukon</li>
+          <li><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Mustang</li>
+          <li><svg class="pin-icon" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Del City</li>
+        </ul>
+        <p class="area-note">* Call to confirm your specific location.</p>
+      </div>
+      <div class="area-cta-box">
+        <h3>Need a Repair?</h3>
+        <p>Call now for same-day availability. We'll come straight to you — no tow truck needed.</p>
+        <a href="tel:+14059235774" class="big-phone">(405) 923-5774</a>
+        <a href="tel:+14059235774" class="btn-orange"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Call to Book</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact-sec" id="contact">
+  <div class="sec-inner">
+    <span class="sec-tag">Get In Touch</span>
+    <h2 class="sec-title">Contact Us</h2>
+    <div class="bar"></div>
+    <div class="contact-grid">
+      <div>
+        <a class="contact-num" href="tel:+14059235774">(405) 923-5774</a>
+        <p class="contact-tap">Tap to call on mobile</p>
+        <div class="info-rows">
+          <div class="info-row">
+            <div class="info-emoji"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="info-label">Hours</div><div class="info-val">Mon–Sat: 7am – 7pm<br>Sunday: By Appointment</div></div>
+          </div>
+          <div class="info-row">
+            <div class="info-emoji"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="info-label">Service Area</div><div class="info-val">Oklahoma City & Edmond Metro</div></div>
+          </div>
+          <div class="info-row">
+            <div class="info-emoji"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+            <div><div class="info-label">We Come To You</div><div class="info-val">Home, workplace, or roadside</div></div>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p class="review-q">"Called Zoran on a Monday morning, he was at my house by noon. Replaced my starter on the spot. Charged me half what the dealership quoted. This is the only mechanic I'll call from now on."</p>
+          <div class="review-who">David M.</div>
+          <div class="review-loc">Edmond, OK</div>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p class="review-q">"My car broke down on I-35 and Zoran came out within the hour. Fixed the problem roadside and got me home safe. Unbelievably good service at a fair price. Couldn't recommend him more."</p>
+          <div class="review-who">Sarah L.</div>
+          <div class="review-loc">Moore, OK</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-name">MF Auto Mobile Repair</div>
+        <span class="footer-brand-tag">Mobile Mechanic · OKC & Edmond</span>
+        <p>Honest work. Fair pricing. We come to you. Mobile mechanic serving the OKC metro — no shop visit required.</p>
+        <a href="tel:+14059235774" class="f-phone">(405) 923-5774</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Brake Repair</li><li>Alternator Replacement</li>
+          <li>Starter Replacement</li><li>Diagnostics</li>
+          <li>Suspension Work</li><li>Tune-Ups</li>
+          <li>Battery Replacement</li><li>Roadside Assistance</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Area</h4>
+        <ul>
+          <li>Oklahoma City</li><li>Edmond</li>
+          <li>North OKC</li><li>Midwest City</li>
+          <li>Moore</li><li>Yukon</li>
+          <li>Mustang</li><li>Del City</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 MF Auto Mobile Repair. All rights reserved.</span>
+      <span>Oklahoma City & Edmond, OK</span>
+    </div>
+  </div>
+</footer>
+
+<a class="sticky-mob" href="tel:+14059235774"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:8px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg> Call Now: (405) 923-5774</a>
+
+</body>
+</html>
