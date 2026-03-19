@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mobile mechanic in Oklahoma City & Edmond. MF Auto Mobile Repair comes to your home, job, or roadside. Fast, honest, same-day service. Call (405) 923-5774." />
+  <title>Mobile Mechanic Oklahoma City & Edmond | MF Auto Mobile Repair</title>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "MF Auto Mobile Repair",
+    "telephone": "+14059235774",
+    "url": "https://mfautomobilerepair.com",
+    "description": "Mobile mechanic serving Oklahoma City and Edmond. We come to your home, work, or roadside.",
+    "areaServed": ["Oklahoma City", "Edmond", "Oklahoma"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Oklahoma City",
+      "addressRegion": "OK",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Sa 07:00-19:00",
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "47"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #131311;
+      --charcoal:   #1c1c19;
+      --steel:      #2e2e2a;
+      --mid:        #454540;
+      --muted:      #7a7870;
+      --orange:     #e5620a;
+      --orange-lit: #f06b12;
+      --cream:      #f0ebe3;
+      --off:        #e6e0d6;
+      --sand:       #bab3a8;
+      --white:      #ffffff;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--charcoal);
+      color: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── UTILITY ─── */
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .02em;
+      line-height: 1.08;
+      color: var(--white);
+    }
+    .rule {
+      width: 36px; height: 3px;
+      background: var(--orange);
+      border-radius: 2px;
+      margin: 14px 0 28px;
+    }
+
+    /* ─── TOPBAR ─── */
+    .topbar {
+      background: var(--orange);
+      text-align: center;
+      padding: 8px 20px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      background: var(--ink);
+      border-bottom: 2px solid var(--steel);
+      position: sticky;
+      top: 0;
+      z-index: 90;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      max-width: 1080px;
+      margin: 0 auto;
+      gap: 16px;
+    }
+    .logo-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--white);
+      line-height: 1.1;
+    }
+    .logo-sub {
+      font-size: 11px;
+      color: var(--orange);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .hdr-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .hdr-cta-lbl { font-size: 10px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; }
+    .hdr-phone {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--orange);
+      letter-spacing: .03em;
+      transition: color .15s;
+    }
+    .hdr-phone:hover { color: var(--orange-lit); }
+
+    /* ─── HERO ─── */
+    .hero {
+      background: var(--ink);
+      padding: 64px 20px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* subtle grid floor */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 52px 52px;
+      pointer-events: none;
+    }
+    /* orange glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -100px; right: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(229,98,10,.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(34px, 6vw, 62px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .015em;
+      line-height: 1.02;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .hero h1 span { color: var(--orange); }
+    .hero-sub {
+      font-size: 17px;
+      color: var(--sand);
+      max-width: 520px;
+      line-height: 1.68;
+      margin-bottom: 32px;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--ink);
+      padding: 15px 32px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      border: 2px solid var(--orange);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background .15s, border-color .15s;
+    }
+    .btn-primary:hover { background: var(--orange-lit); border-color: var(--orange-lit); }
+    .btn-sec {
+      background: transparent;
+      color: var(--cream);
+      padding: 15px 28px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      border: 2px solid var(--mid);
+      display: inline-block;
+      transition: border-color .15s, background .15s;
+    }
+    .btn-sec:hover { border-color: var(--sand); background: var(--steel); }
+
+    /* trust pills */
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .trust-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--steel);
+      border: 1px solid var(--mid);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--cream);
+    }
+    .trust-pill svg { flex-shrink: 0; }
+
+    /* ─── PROBLEMS ─── */
+    .problems { background: var(--charcoal); padding: 64px 20px; }
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 0;
+    }
+    .prob-card {
+      background: var(--steel);
+      border: 1px solid var(--mid);
+      border-left: 3px solid var(--orange);
+      border-radius: 4px;
+      padding: 20px 18px;
+    }
+    .prob-card-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .prob-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+    /* ─── SERVICES ─── */
+    .services { background: var(--ink); padding: 64px 20px; }
+    .svc-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 0;
+    }
+    .svc-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      background: var(--charcoal);
+      border: 1px solid var(--steel);
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cream);
+      transition: border-color .15s;
+    }
+    .svc-item:hover { border-color: var(--orange); }
+    .svc-dot {
+      width: 8px; height: 8px;
+      background: var(--orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ─── WHY US ─── */
+    .why { background: var(--charcoal); padding: 64px 20px; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .why-card {
+      background: var(--ink);
+      border: 1px solid var(--steel);
+      border-top: 3px solid var(--orange);
+      border-radius: 4px;
+      padding: 22px 20px;
+    }
+    .why-card-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--white);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .why-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ─── EMERGENCY BAND ─── */
+    .emergency {
+      background: var(--orange);
+      padding: 48px 20px;
+      text-align: center;
+    }
+    .emergency h2 {
+      color: var(--ink);
+      font-size: clamp(24px, 4vw, 38px);
+      margin-bottom: 10px;
+    }
+    .emergency p {
+      font-size: 16px;
+      color: rgba(0,0,0,.65);
+      margin-bottom: 28px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-dark {
+      background: var(--ink);
+      color: var(--white);
+      padding: 16px 36px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background .15s;
+    }
+    .btn-dark:hover { background: var(--charcoal); }
+
+    /* ─── TESTIMONIALS ─── */
+    .testimonials { background: var(--ink); padding: 64px 20px; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .testi {
+      background: var(--charcoal);
+      border: 1px solid var(--steel);
+      border-radius: 4px;
+      padding: 26px 24px;
+    }
+    .testi-stars { color: var(--orange); font-size: 16px; letter-spacing: 3px; margin-bottom: 12px; }
+    .testi-text { font-size: 15px; color: var(--sand); line-height: 1.65; font-style: italic; margin-bottom: 16px; }
+    .testi-name { font-size: 13px; font-weight: 700; color: var(--cream); }
+    .testi-loc { font-size: 12px; color: var(--muted); }
+
+    /* ─── AREA ─── */
+    .area { background: var(--charcoal); padding: 48px 20px; text-align: center; }
+    .area p { font-size: 15px; color: var(--muted); max-width: 520px; margin: 0 auto; line-height: 1.7; }
+    .area p strong { color: var(--cream); font-weight: 600; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--ink);
+      border-top: 2px solid var(--orange);
+      padding: 36px 20px 24px;
+    }
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-left .logo-name { font-size: 17px; }
+    .footer-phone {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--orange);
+      display: block;
+      margin-top: 4px;
+    }
+    .footer-right { font-size: 13px; color: var(--muted); text-align: right; line-height: 1.8; }
+    .footer-bottom {
+      max-width: 1080px;
+      margin: 24px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--steel);
+      font-size: 12px;
+      color: var(--mid);
+      text-align: center;
+    }
+
+    /* ─── FLOATING CALL BUTTON ─── */
+    .float-call {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 200;
+      background: var(--orange);
+      color: var(--ink);
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 14px 22px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      box-shadow: 0 4px 24px rgba(229,98,10,.45);
+      transition: background .15s, transform .15s, box-shadow .15s;
+    }
+    .float-call:hover {
+      background: var(--orange-lit);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(229,98,10,.55);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 760px) {
+      .problems-grid { grid-template-columns: 1fr; }
+      .svc-list { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .footer-right { text-align: left; }
+      /* hide float btn on very small, use topbar instead */
+    }
+
+    /* ─── BOOKING MODAL ─── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.75);
+      z-index: 300;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--charcoal);
+      border: 1px solid var(--mid);
+      border-top: 4px solid var(--orange);
+      border-radius: 6px;
+      padding: 36px 32px;
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      animation: modalIn .2s ease;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 14px; right: 16px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 1;
+      transition: color .15s;
+    }
+    .modal-close:hover { color: var(--cream); }
+    .modal h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+    .modal-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .modal-sub span { color: var(--orange); font-weight: 600; }
+    .mfg { margin-bottom: 16px; }
+    .mfg label {
+      display: block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .mfg input, .mfg select, .mfg textarea {
+      width: 100%;
+      padding: 11px 14px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      background: var(--ink);
+      border: 1px solid var(--mid);
+      border-radius: 3px;
+      color: var(--cream);
+      outline: none;
+      transition: border-color .15s;
+      -webkit-appearance: none;
+    }
+    .mfg input::placeholder, .mfg textarea::placeholder { color: var(--mid); }
+    .mfg input:focus, .mfg select:focus, .mfg textarea:focus { border-color: var(--orange); }
+    .mfg select option { background: var(--ink); }
+    .mfg textarea { resize: none; height: 80px; }
+    .modal-send {
+      width: 100%;
+      padding: 14px;
+      background: var(--orange);
+      color: var(--ink);
+      border: none;
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      transition: background .15s;
+    }
+    .modal-send:hover { background: var(--orange-lit); }
+    .modal-note {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+  Same-Day Mobile Mechanic — Oklahoma City &amp; Edmond — Call (405) 923-5774
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="logo-name">MF Auto Mobile Repair</div>
+      <div class="logo-sub">Mobile Mechanic · OKC &amp; Edmond</div>
+    </div>
+    <div class="hdr-cta">
+      <span class="hdr-cta-lbl">Call Anytime</span>
+      <a class="hdr-phone" href="tel:+14059235774">(405) 923-5774</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="tag">Oklahoma City &amp; Edmond's Mobile Mechanic</p>
+    <h1>Mobile Mechanic in<br><span>Oklahoma City</span> &amp; Edmond<br>— We Come To You</h1>
+    <p class="hero-sub">Car trouble at home, work, or on the road? We come to you — no tow truck needed. Fast, honest repairs at a fair price.</p>
+    <div class="hero-btns">
+      <a href="tel:+14059235774" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Call Now
+      </a>
+      <button onclick="openBooking()" class="btn-sec" style="cursor:pointer;font-family:'Oswald',sans-serif;">Book via Text →</button>
+    </div>
+    <div class="trust-row">
+      <div class="trust-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--orange)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        5-Star Rated
+      </div>
+      <div class="trust-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Same-Day Service
+      </div>
+      <div class="trust-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        Honest Pricing
+      </div>
+      <div class="trust-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        We Come To You
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMON PROBLEMS (SEO + relatability) -->
+<section class="problems">
+  <div class="wrap">
+    <p class="tag">Sound familiar?</p>
+    <h2>Common Situations<br>We Fix Fast</h2>
+    <div class="rule"></div>
+    <div class="problems-grid">
+      <div class="prob-card">
+        <div class="prob-card-title">Won't Start</div>
+        <p>Dead battery, bad starter, or failed alternator — we diagnose and fix it at your location, no tow required.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-card-title">Check Engine Light</div>
+        <p>Don't guess. We come to you, run a full diagnostic scan, and tell you exactly what's wrong — and what it'll cost.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-card-title">Brakes Grinding</div>
+        <p>Don't drive on bad brakes. We'll come to your home or workplace and replace pads, rotors, or calipers on the spot.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-card-title">Stranded on the Road</div>
+        <p>Broken down on I-35 or anywhere in OKC? Call us. We come to you and get you moving — often within the hour.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-card-title">Rough Ride or Pulling</div>
+        <p>Suspension and steering issues diagnosed and repaired mobile. No need to limp to a shop.</p>
+      </div>
+      <div class="prob-card">
+        <div class="prob-card-title">Overdue Tune-Up</div>
+        <p>Spark plugs, filters, fluids — we handle routine maintenance right in your driveway on your schedule.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <p class="tag">What We Repair</p>
+    <h2>Our Services</h2>
+    <div class="rule"></div>
+    <div class="svc-list">
+      <div class="svc-item"><span class="svc-dot"></span>Brake Repair &amp; Replacement</div>
+      <div class="svc-item"><span class="svc-dot"></span>Alternator Replacement</div>
+      <div class="svc-item"><span class="svc-dot"></span>Starter Replacement</div>
+      <div class="svc-item"><span class="svc-dot"></span>Battery Diagnosis &amp; Replacement</div>
+      <div class="svc-item"><span class="svc-dot"></span>Check Engine Diagnostics</div>
+      <div class="svc-item"><span class="svc-dot"></span>Suspension &amp; Steering</div>
+      <div class="svc-item"><span class="svc-dot"></span>Tune-Ups &amp; Maintenance</div>
+      <div class="svc-item"><span class="svc-dot"></span>Roadside Assistance</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+  <div class="wrap">
+    <p class="tag">Why MF Auto</p>
+    <h2>What Makes Us Different</h2>
+    <div class="rule"></div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          We Come To You
+        </div>
+        <p>No tow truck. No waiting room. We come to your home, office, or wherever your car is. Save time and money.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          Honest, Upfront Pricing
+        </div>
+        <p>You'll know the price before we start. No surprises, no hidden fees, no upselling you on work you don't need.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Same-Day Availability
+        </div>
+        <p>We offer same-day service for most repairs in the Oklahoma City and Edmond area. Call early — we'll get there.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          Experienced Mechanic
+        </div>
+        <p>Zoran has 10+ years of hands-on repair experience. He explains exactly what's wrong and fixes it right the first time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMERGENCY BAND -->
+<section class="emergency">
+  <div class="wrap">
+    <h2>Broken Down Right Now?</h2>
+    <p>Call us. We serve Oklahoma City, Edmond, and surrounding areas — and we move fast when you're stuck.</p>
+    <a href="tel:+14059235774" class="btn-dark">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      (405) 923-5774
+    </a>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="reviews">
+  <div class="wrap">
+    <p class="tag">What Customers Say</p>
+    <h2>Real Reviews</h2>
+    <div class="rule"></div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Zoran came to my house and replaced my alternator in under two hours. Saved me hundreds over the dealership quote. Honest, fast, and explained everything clearly."</p>
+        <div class="testi-name">Michael T.</div>
+        <div class="testi-loc">Oklahoma City, OK</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Stranded on I-35 and he was there within the hour. Fixed the problem roadside and got me home. Unreal service. This is the only mechanic I'm calling from now on."</p>
+        <div class="testi-name">Amanda R.</div>
+        <div class="testi-loc">Edmond, OK</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://www.google.com/maps/place/MF+Auto/@34.8113872,-112.7368316,6z/data=!4m8!3m7!1s0xadcb65ade89ecb63:0x5b598a5b3cc5db1d!8m2!3d34.917416!4d-107.438187!9m1!1b1!16s%2Fg%2F11kpnc2ttb" target="_blank" rel="noopener" class="btn-sec" style="display:inline-flex;align-items:center;gap:9px;">
+        View All Google Reviews &rarr;
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA (light SEO signal) -->
+<section class="area" id="contact">
+  <div class="wrap">
+    <p class="tag">Service Area</p>
+    <h2 style="font-size:clamp(22px,3vw,30px);margin-bottom:14px;">Oklahoma City, Edmond &amp; Surrounding Areas</h2>
+    <p>We serve <strong>Oklahoma City</strong>, <strong>Edmond</strong>, and the surrounding OKC metro — including Moore, Yukon, Midwest City, and beyond. Not sure if we cover your location? Just call.</p>
+    <br>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px;">
+      <a href="tel:+14059235774" class="btn-primary" style="display:inline-flex;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Call (405) 923-5774
+      </a>
+      <button onclick="openBooking()" class="btn-sec" style="cursor:pointer;font-family:'Oswald',sans-serif;">Book via Text →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="logo-name">MF Auto Mobile Repair</div>
+      <div class="logo-sub">Mobile Mechanic · OKC &amp; Edmond</div>
+      <a href="tel:+14059235774" class="footer-phone">(405) 923-5774</a>
+    </div>
+    <div class="footer-right">
+      <div>Mon – Sat &nbsp;7am – 7pm</div>
+      <div>Sunday: By Appointment</div>
+      <div style="margin-top:6px;color:var(--orange)">Oklahoma City &amp; Edmond, OK</div>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 MF Auto Mobile Repair · Oklahoma City &amp; Edmond, OK · (405) 923-5774</div>
+</footer>
+
+<!-- FLOATING CALL BUTTON -->
+<a href="tel:+14059235774" class="float-call" aria-label="Call MF Auto Mobile Repair">
+  <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+  Call Now
+</a>
+
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeBooking()" aria-label="Close">&times;</button>
+    <h3>Book a Service</h3>
+    <p class="modal-sub">Fill this out and tap <span>Send Text</span> — it opens your messages app with everything pre-filled. Just hit send.</p>
+
+    <div class="mfg">
+      <label for="b-name">Your Name</label>
+      <input type="text" id="b-name" placeholder="John Smith" />
+    </div>
+    <div class="mfg">
+      <label for="b-vehicle">Vehicle (Year / Make / Model)</label>
+      <input type="text" id="b-vehicle" placeholder="2019 Chevy Silverado" />
+    </div>
+    <div class="mfg">
+      <label for="b-service">Service Needed</label>
+      <select id="b-service">
+        <option value="">— Select a service —</option>
+        <option>Brake Repair</option>
+        <option>Alternator Replacement</option>
+        <option>Starter Replacement</option>
+        <option>Battery Issue</option>
+        <option>Check Engine / Diagnostics</option>
+        <option>Suspension / Steering</option>
+        <option>Tune-Up / Maintenance</option>
+        <option>Roadside Assistance</option>
+        <option>Not sure — need diagnosis</option>
+      </select>
+    </div>
+    <div class="mfg">
+      <label for="b-location">Your Location / Address</label>
+      <input type="text" id="b-location" placeholder="123 Main St, Edmond OK" />
+    </div>
+    <div class="mfg">
+      <label for="b-notes">Anything else we should know? (optional)</label>
+      <textarea id="b-notes" placeholder="e.g. car won't start, grinding noise when braking..."></textarea>
+    </div>
+
+    <button class="modal-send" onclick="sendBookingText()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      Open Text Message
+    </button>
+    <p class="modal-note">This opens your messages app with a pre-filled text to (405) 923-5774. You stay in control — just tap Send.</p>
+  </div>
+</div>
+
+<script>
+  function openBooking() {
+    document.getElementById('bookingModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBooking() {
+    document.getElementById('bookingModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('bookingModal')) closeBooking();
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBooking(); });
+
+  function sendBookingText() {
+    const name     = document.getElementById('b-name').value.trim();
+    const vehicle  = document.getElementById('b-vehicle').value.trim();
+    const service  = document.getElementById('b-service').value.trim();
+    const location = document.getElementById('b-location').value.trim();
+    const notes    = document.getElementById('b-notes').value.trim();
+
+    if (!name || !vehicle || !service || !location) {
+      alert('Please fill out your name, vehicle, service, and location.');
+      return;
+    }
+
+    const msg = [
+      'Hi, I\'d like to book a service with MF Auto Mobile Repair.',
+      '',
+      'Name: ' + name,
+      'Vehicle: ' + vehicle,
+      'Service: ' + service,
+      'Location: ' + location,
+      notes ? 'Notes: ' + notes : null
+    ].filter(Boolean).join('\n');
+
+    window.location.href = 'sms:+14059235774?body=' + encodeURIComponent(msg);
+  }
+</script>
+</body>
+</html>
